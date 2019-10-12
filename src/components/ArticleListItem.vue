@@ -1,10 +1,9 @@
 <template lang="html">
   <div v-if="article" class="item">
-    <li v-on:click="showContent" >{{article.webTitle}}</li>
-    <div v-if="!isHidden">
-      <p>{{article.pillarName}}</p>
+    <div v-if="!isHidden" class="list-item">
       <a :href="article.webUrl">{{article.webTitle}}</a>
     </div>
+    <li v-on:click="showContent" >{{article.webTitle}}</li>
   </div>
 </template>
 
@@ -14,7 +13,8 @@ export default {
   props:['article'],
   data(){
     return{
-      isHidden: true
+      isHidden: true,
+      phrase:""
     }
   },
   methods:{
@@ -24,22 +24,38 @@ export default {
       }else{
         this.isHidden = true
       }
-      // this.isHidden ? this.isHidden = true : this.isHidden = false
     }
   }
 }
 </script>
 
 <style lang="css" scoped>
-li{
-  background-color: palegoldenrod;
-  border: 1px solid black;
+li, .list-item{
+  border: 0.5px solid black;
   cursor:pointer;
   display: flex;
-  width: 36vw;
-  height: auto;
+}
+li{
+  background-color: #C7DBE6;
+  border-top: 1px #C70000 solid;
+  margin-top: 1vh;
+  font-family: "guardian";
+  width:25vw;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 
-/* z-index: 200;
-position: fixed */
+.list-item{
+  background-color: #C7DBE6;
+  z-index: 0;
+  margin-top: 1vh;
+  position: absolute;
+}
+a:link {
+  text-decoration: none;
+}
+
+
 </style>

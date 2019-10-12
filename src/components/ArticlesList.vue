@@ -20,7 +20,9 @@ export default {
 
 <style lang="css" scoped>
 ul{
-  /* display: flex; */
+  display: flex;
   flex-flow: row wrap;
+  justify-content: space-around;
+    padding-bottom: 3vh;
 }
 </style>
