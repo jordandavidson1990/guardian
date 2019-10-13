@@ -3,7 +3,7 @@
     <div v-if="!isHidden" class="list-item">
       <a :href="article.webUrl">{{article.webTitle}}</a>
     </div>
-    <li v-on:click="showContent" >{{article.webTitle}}</li>
+    <li v-on:click="showContent">{{article.webTitle}}</li>
   </div>
 </template>
 

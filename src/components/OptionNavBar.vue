@@ -14,11 +14,11 @@ export default {
   data(){
     return{
       mainOptions:[
-        {name: 'news', color: '#C70000'},
-        {name: 'opinion', color: '#ff7f0f'},
-        {name: 'sport', color: '#00b2ff'},
-        {name: 'culture', color: '#eacca0'},
-        {name: 'lifestyle', color: '#ffabdb'}
+        {name: 'news', color: 'red'},
+        {name: 'opinion', color: 'orange'},
+        {name: 'sport', color: 'blue'},
+        {name: 'culture', color: 'tan'},
+        {name: 'lifestyle', color: 'pink'}
       ]
     }
   },
@@ -33,6 +33,7 @@ ul{
   display:flex;
   justify-content: space-evenly;
   background-color: #052962;
-  padding-bottom: 2vh;
+  border-top: 1px solid white;
+
 }
 </style>
